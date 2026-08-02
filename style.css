@@ -1,0 +1,774 @@
+/* ================================================= */
+/*            REGALO PARA EVANGELINE ❤️              */
+/* ================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,#3b174d,#12091f 65%);
+
+    color:white;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+}
+
+/* ===========================
+        ESTRELLAS
+=========================== */
+
+#stars{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:-2;
+
+    background-image:
+
+    radial-gradient(white 1px,transparent 1px),
+    radial-gradient(white 1px,transparent 1px),
+    radial-gradient(rgba(255,255,255,.5) 1px,transparent 1px);
+
+    background-size:
+
+    90px 90px,
+    140px 140px,
+    220px 220px;
+
+    animation:starsMove 90s linear infinite;
+
+}
+
+@keyframes starsMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-800px);
+
+    }
+
+}
+
+/* ===========================
+      CORAZONES
+=========================== */
+
+#hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:999;
+
+}
+
+.heart{
+
+    position:absolute;
+
+    color:#ff5c93;
+
+    animation:fall linear forwards;
+
+    opacity:.9;
+
+}
+
+@keyframes fall{
+
+    from{
+
+        transform:translateY(-100px) rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(120vh) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ===========================
+      HERO
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+/* ===========================
+      GLASS
+=========================== */
+
+.glass{
+
+    width:min(900px,95%);
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:30px;
+
+    padding:60px;
+
+    text-align:center;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.glass h3{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+    color:#ffd1df;
+
+}
+
+.glass h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:95px;
+
+    margin-bottom:15px;
+
+    text-shadow:0 0 20px rgba(255,255,255,.4);
+
+}
+
+.glass h2{
+
+    font-size:28px;
+
+    font-weight:300;
+
+    margin-bottom:25px;
+
+    line-height:1.6;
+
+}
+
+.glass p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#eeeeee;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+      BOTONES
+=========================== */
+
+button{
+
+    margin-top:40px;
+
+    background:#ff4f88;
+
+    color:white;
+
+    border:none;
+
+    border-radius:60px;
+
+    padding:18px 45px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 15px 30px rgba(255,79,136,.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    background:#ff2d73;
+
+}
+
+/* ===========================
+      SECCIONES
+=========================== */
+
+.hidden{
+
+    display:none;
+
+}
+
+section{
+
+    padding:80px 20px;
+
+}
+
+/* ===========================
+      CARTA
+=========================== */
+
+.paper{
+
+    width:min(900px,95%);
+
+    margin:auto;
+
+    background:white;
+
+    color:#444;
+
+    border-radius:30px;
+
+    padding:60px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+}
+
+.paper h2{
+
+    font-family:'Great Vibes',cursive;
+
+    text-align:center;
+
+    font-size:60px;
+
+    color:#ff4f88;
+
+    margin-bottom:20px;
+
+}
+
+.paper p{
+
+    font-size:20px;
+
+    line-height:2;
+
+    margin-bottom:18px;
+
+}
+
+.line{
+
+    width:120px;
+
+    height:3px;
+
+    background:#ff4f88;
+
+    margin:20px auto 40px;
+
+}
+
+.heartIcon{
+
+    display:block;
+
+    text-align:center;
+
+    font-size:50px;
+
+    margin-bottom:15px;
+
+}
+/* ================================================= */
+/*              GALERÍA DE FOTOS                     */
+/* ================================================= */
+
+.gallery{
+
+    text-align:center;
+
+}
+
+.gallery h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:65px;
+
+    margin-bottom:15px;
+
+}
+
+.gallery>p{
+
+    font-size:20px;
+
+    color:#f5d8e5;
+
+    margin-bottom:50px;
+
+}
+
+.photos{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.photo{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+    transition:.4s;
+
+    background:white;
+
+}
+
+.photo img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s;
+
+}
+
+.photo:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.photo:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ================================================= */
+/*               MENSAJE FINAL                       */
+/* ================================================= */
+
+.final{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.finalCard{
+
+    max-width:900px;
+
+}
+
+.final h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:70px;
+
+    margin-bottom:25px;
+
+}
+
+.final h2{
+
+    margin-top:35px;
+
+    font-size:34px;
+
+    color:#ffd9e7;
+
+}
+
+.final p{
+
+    font-size:22px;
+
+    line-height:1.9;
+
+}
+
+/* ================================================= */
+/*                ROSA                               */
+/* ================================================= */
+
+.roseSection{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+}
+
+.roseContainer{
+
+    animation:floatRose 4s ease-in-out infinite;
+
+}
+
+.rose{
+
+    font-size:90px;
+
+    margin-bottom:20px;
+
+    filter:drop-shadow(0 0 20px rgba(255,0,90,.5));
+
+}
+
+.roseContainer h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:48px;
+
+}
+
+@keyframes floatRose{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* ================================================= */
+/*                  FOOTER                           */
+/* ================================================= */
+
+footer{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(10px);
+
+}
+
+footer p{
+
+    margin:8px 0;
+
+    color:#f3d7e6;
+
+}
+
+/* ================================================= */
+/*              CANVAS EFECTOS                       */
+/* ================================================= */
+
+#canvas{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:998;
+
+}
+
+/* ================================================= */
+/*              BOTÓN LOVE                           */
+/* ================================================= */
+
+#love{
+
+    background:#ff296d;
+
+    font-size:20px;
+
+    padding:20px 50px;
+
+}
+
+#love:hover{
+
+    background:#ff0f5d;
+
+}
+
+/* ================================================= */
+/*             RESPONSIVE                            */
+/* ================================================= */
+
+@media(max-width:900px){
+
+    .glass{
+
+        padding:35px;
+
+    }
+
+    .glass h1{
+
+        font-size:65px;
+
+    }
+
+    .glass h2{
+
+        font-size:22px;
+
+    }
+
+    .glass p{
+
+        font-size:18px;
+
+    }
+
+    .paper{
+
+        padding:35px;
+
+    }
+
+    .paper h2{
+
+        font-size:45px;
+
+    }
+
+    .paper p{
+
+        font-size:17px;
+
+    }
+
+    .gallery h2{
+
+        font-size:48px;
+
+    }
+
+    .photo img{
+
+        height:300px;
+
+    }
+
+    .final h1{
+
+        font-size:48px;
+
+    }
+
+    .final h2{
+
+        font-size:26px;
+
+    }
+
+    .final p{
+
+        font-size:18px;
+
+    }
+
+    .rose{
+
+        font-size:70px;
+
+    }
+
+    .roseContainer h2{
+
+        font-size:34px;
+
+    }
+
+    button{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+}
+/* ============================
+        CARRUSEL
+=============================*/
+
+.carousel {
+    position: relative;
+    width: 900px;
+    max-width: 90%;
+    margin: 50px auto;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.4);
+    /* Fondo para rellenar los espacios laterales si la foto es vertical */
+    background: #12091f; 
+}
+
+.carousel-track img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ajusta la imagen completa sin recortarla */
+    object-fit: contain; 
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-track img.active {
+    opacity: 1;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    background: rgba(255, 255, 255, .7);
+    color: #ff2e70;
+    z-index: 10;
+    /* Transición suave para el hover */
+    transition: background 0.3s; 
+}
+
+.prev {
+    left: -70px;
+}
+
+.next {
+    right: -70px;
+}
+
+.prev:hover,
+.next:hover {
+    background: white;
+}
+
+/* Adaptación Responsive */
+@media (max-width: 768px) {
+    .carousel-track {
+        height: 380px;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+}
